@@ -1,0 +1,4 @@
+release: python manage.py migrate
+web: gunicorn juno.wsgi
+
+web: python manage.py makemigrations;python manage.py migrate;gunicorn juno.wsgi
